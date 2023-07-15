@@ -5,6 +5,7 @@ import { ExamePage } from "./pages/Exame/Index"
 import { ConsultaPage } from "./pages/Consulta/Index"
 import { PacientePage } from "./pages/Paciente/Index"
 import { ProntuarioPage } from "./pages/Prontuario/Index"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   
