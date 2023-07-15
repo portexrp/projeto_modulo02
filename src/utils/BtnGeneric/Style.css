@@ -1,0 +1,30 @@
+.baseBtn {
+    min-width: 130px;
+    margin-right: 10px;
+    font-weight: 700 !important;
+}
+
+.baseBtn:hover {
+    box-shadow: 1px 2px 2px 1px rgb(201, 198, 198);
+}
+
+.cancelar {
+    background-color: rgb(179, 175, 175) !important;
+    color: white !important;
+    
+
+}
+
+.editar{
+    background-color: coral !important;
+    color: white !important;
+    border: none !important;
+}
+
+.excluir {
+
+    background-color: red !important;
+    color: white !important;
+    border: none !important;
+
+}
