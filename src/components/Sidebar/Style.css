@@ -1,5 +1,7 @@
 .styleSidebar {
     background-color: #a7a8f4;
+    margin-left: -12px;
+    padding-left: 12px;
 }
 .styleSidebar span {
     background-color: #a7a8f4;
