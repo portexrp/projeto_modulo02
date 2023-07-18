@@ -11,7 +11,7 @@ export const Header = () => {
                 <Navbar.Brand className="header" href="#home">LAB - Medicine</Navbar.Brand>
                 <Nav className="ms-auto header d-flex">                        
                         <Nav.Link className="header d-flex" href="#perfil">                            
-                            <CgProfile  size={20} className="mr-2 header" />                        
+                            <CgProfile  size={20} style={{marginRight: '5px', marginTop: '2px'}} className="mr-2 header" />                        
                              Perfil
                         </Nav.Link>                        
                     </Nav>
