@@ -13,7 +13,7 @@ export const BtnGeneric = ({ type, nomeBtn, funcao }) => {
     switch (funcao) {
         case 'cadastrar':
             return (
-            <Button className="baseBtn" id='cadBtn' aria-label="botão de cadastra" variant="primary" type={type}>
+            <Button className="baseBtn cadastrar" id='cadBtn' aria-label="botão de cadastra" variant="" type={type}>
                 {nomeBtn}
             </Button>
             )
