@@ -11,20 +11,40 @@
 .cancelar {
     background-color: rgb(179, 175, 175) !important;
     color: white !important;
-    
-
 }
 
-.editar{
+.cadastrar {
+    background-color: white !important;
+    color: #a7a8f4 !important;
+    border-color: #a7a8f4 !important;
+}
+
+.cadastrar:hover {
+    background-color: #a7a8f4 !important;
+    color: white !important;
+    border-color: #a7a8f4 !important;
+}
+
+.editar {
+    background-color: white !important;
+    color: coral !important;
+    border: 1px solid coral !important;
+}
+
+.editar:hover {
     background-color: coral !important;
     color: white !important;
     border: none !important;
 }
 
 .excluir {
+    background-color: white !important;
+    color: red !important;
+    border-color: red !important;
+}
 
+.excluir:hover {
     background-color: red !important;
     color: white !important;
     border: none !important;
-
 }
