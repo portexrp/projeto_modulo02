@@ -1,6 +1,6 @@
 .baseBtn {
-    min-width: 130px;
-    margin-right: 10px;
+    width: 50%;
+    min-width: 90px;    
     font-weight: 700 !important;
 }
 
