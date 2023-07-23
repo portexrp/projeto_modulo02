@@ -5,7 +5,9 @@ import { SearchPaciente } from "../../components/SearchPacientes/Index";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
 import { CardPaciente } from "../../components/card/Index";
+
 
 
 export const HomePage = () => {
@@ -28,11 +30,13 @@ export const HomePage = () => {
                                 <SearchPaciente/>
                                 </Col>
                             </Row>
+
                             <Row>
                                 <Col>
                                 <CardPaciente/>
                                 </Col>
                             </Row>
+
                         </Col>
 
                     </Col>
