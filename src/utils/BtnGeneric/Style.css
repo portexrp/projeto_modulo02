@@ -1,6 +1,5 @@
-.baseBtn {
-    width: 50%;
-    min-width: 90px;    
+.baseBtn {    
+    min-width: 130px;    
     font-weight: 700 !important;
 }
 

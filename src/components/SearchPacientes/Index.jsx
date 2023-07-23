@@ -14,15 +14,14 @@ export const SearchPaciente = () => {
         <Navbar>
             <Container fluid>
                 <Col>
-                    <Form className="d-flex " style={{ margin: '40px', opacity: '0.7' }}>
+                    <Form className="searchButton" style={{ margin: '40px', opacity: '0.7' }}>
                         <Form.Control
                             type="search"
                             placeholder="Pesquisar paciente"
-                            className="me-2"
                             aria-label="Pesquisar paciente"
-                            style={{marginRight: '20px'}}
+                            style={{ marginBottom: '5px' }}
                         />
-                        <BtnGeneric className='searchButton' type="submit" nomeBtn="Pesquisar" funcao="cadastrar" />
+                        <BtnGeneric type="submit" nomeBtn="Pesquisar" funcao="cadastrar" />
                     </Form>
                 </Col>
                 <Row>

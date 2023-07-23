@@ -1,4 +1,6 @@
-#cadBtn {
-    max-width: 150px !important;
-    
+
+.searchButton {
+    display: flex;
+    flex-direction: column;    
 }
+
