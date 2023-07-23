@@ -5,7 +5,7 @@ import './Style.css'
 
 export const Estatisticas = ({quantidade, tipo})=>{
     return (
-        <Card className='cardElement' style={{ width: '18rem', height: '8vw', display:'inline-block', textAlign:'center' }}>
+        <Card className='cardElement' style={{ width: '27%',minWidth: '180px', height: '8vw', display:'inline-block', textAlign:'center' }}>
         <Card.Body>
           <Card.Title>{quantidade} <ImStatsDots style={{ marginLeft: '5px', color: '#a7a8f4', backgroundColor: 'white'}}/></Card.Title>
           <Card.Subtitle className="mb-2 text-muted">{tipo}</Card.Subtitle>
