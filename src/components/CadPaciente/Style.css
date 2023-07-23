@@ -1,25 +1,75 @@
 .formStyle {
-    margin: 30px !important;
+    margin: 30px;
     background-color: white;
     border-radius: 16px;
     min-height: max-content !important;
 }
 
 .nome {
-    width: 47%;
-    min-width: 200px !important;
-    margin-right: -10px;
+    width: 50%;
+    
 }
 
 .lista {
-    width: 47%;
-    min-width: 200px !important;
+    width: 50%;
+    
     
 }
 
-.data {
-    width: 24%;
-    min-width: 200px !important;
+.all {
+    width: 25%;
+    min-width: 250px;  
+    
     
 }
 
+@media (max-width: 360px)
+{
+    .nome{
+        width: 100%;  
+        
+    }
+    .lista{
+        width: 100%;  
+        
+    }
+    .all{
+        width: 100%;  
+        min-width: 200px;
+        
+    }
+    .formStyle {
+        margin: 10px;
+        margin-right: -4px;
+    }
+}
+
+@media (max-width: 390px)
+{
+    .nome{
+        width: 100%;  
+    }
+    .lista{
+        width: 100%; 
+        
+    }
+    .all{
+        width: 100%;  
+        
+    }
+}
+
+
+@media (max-width: 820px)
+{
+    .nome{
+        width: 100%;  
+    }
+    .lista{
+        width: 100%;  
+    }
+    .all{
+        width: 50%;  
+        min-width: 40%;
+    }
+}
