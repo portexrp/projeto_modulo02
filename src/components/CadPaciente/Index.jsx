@@ -31,7 +31,7 @@ export const CadPaciente = () => {
             <InputGeneric style='all' type="text" value={''} placeholder="Ponto de referência" onChange={''} label="Ponto de referência" />
             <Row>
             <Col>
-                    <div style={{ backgroundColor: "white", borderRadius:'16px', paddingTop:'20px', marginTop:'-11px'}}>
+                    <div className='formBtn' style={{ backgroundColor: "white", borderRadius:'16px', paddingTop:'20px', marginTop:'-11px'}}>
                         <BtnGeneric type="submit" nomeBtn="Salvar" funcao="cadastrar" />
                         <BtnGeneric type="submit" nomeBtn="Editar" funcao="editar" />
                         <BtnGeneric type="submit" nomeBtn="Excluir" funcao="excluir" />
