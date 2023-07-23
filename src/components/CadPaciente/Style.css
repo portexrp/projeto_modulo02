@@ -1,0 +1,25 @@
+.formStyle {
+    margin: 30px !important;
+    background-color: white;
+    border-radius: 16px;
+    min-height: max-content !important;
+}
+
+.nome {
+    width: 47%;
+    min-width: 200px !important;
+    margin-right: -10px;
+}
+
+.lista {
+    width: 47%;
+    min-width: 200px !important;
+    
+}
+
+.data {
+    width: 24%;
+    min-width: 200px !important;
+    
+}
+

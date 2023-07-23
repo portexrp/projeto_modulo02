@@ -1,6 +1,8 @@
 .baseBtn {    
     min-width: 130px;    
     font-weight: 700 !important;
+    display: inline-block;
+    margin: 10px;
 }
 
 .baseBtn:hover {
@@ -46,4 +48,12 @@
     background-color: red !important;
     color: white !important;
     border: none !important;
+}
+
+@media (max-width: 360px)
+{
+  .baseBtn
+   {
+    min-width: 200px;   
+   }
 }

@@ -13,7 +13,7 @@ import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import './Style.css'
 
-export const InputGeneric = ({ type, value, placeholder, onChange, label }) => {
+export const InputGeneric = ({ type, value, placeholder, onChange, label, style }) => {
     const [emailError, setEmailError] = useState('');
 
     const handleInput = (event) => {
@@ -21,7 +21,7 @@ export const InputGeneric = ({ type, value, placeholder, onChange, label }) => {
         const emailRegex = /^\S+@\S+\.\S+$/;
 
         if (!emailRegex.test(novoValor)) {
-            setEmailError('Por favor, insira um email válido.');
+            event.target.style
         } else {
             setEmailError('');
         }
@@ -30,7 +30,7 @@ export const InputGeneric = ({ type, value, placeholder, onChange, label }) => {
 
     if (type == 'email') {
         return (
-            <Form.Group className="mb-3 formGroup">
+            <Form.Group className={'formGroup '+style}>
                 <Form.Label aria-label={label} >{label}</Form.Label>
                 <Form.Control type={type} value={value} placeholder={placeholder} onChange={handleInput} />
                 {emailError && <span>{emailError}</span>}
@@ -39,9 +39,9 @@ export const InputGeneric = ({ type, value, placeholder, onChange, label }) => {
 
     }
     return (
-        <Form.Group className="mb-3 formGroup">
+        <Form.Group className={' formGroup '+style} >
             <Form.Label aria-label={label} >{label}</Form.Label>
-            <Form.Control type={type} value={value} placeholder={placeholder} onChange={handleInput} />
+            <Form.Control  type={type} value={value} placeholder={placeholder} onChange={handleInput} />
         </Form.Group>
     )
 

@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom"
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './Style.css'
-import { InputGeneric } from "../../utils/Input.Generic.Full";
+import { InputGeneric } from "../../utils/InputGenericFull";
 import { useState } from "react";
 import { BtnGeneric } from "../../utils/BtnGeneric/Btn.Generic";
 
