@@ -1,0 +1,99 @@
+.formStyle {
+    margin: 30px;
+    background-color: white;
+    border-radius: 16px;
+    min-height: max-content !important;
+}
+.formBtn{        
+    padding-left: 25%;
+}
+
+.nome {
+    width: 49%;
+}
+
+.lista {
+    width: 49%;
+}
+
+.all {
+    width: 24.5%;
+    min-width: 230px;
+    
+}
+
+@media (max-width: 360px)
+{
+    .nome{
+        width: 250px;  
+        
+    }
+    .lista{
+        width: 250px;  
+        
+    }
+    .all{
+        width: 250px;                  
+    }
+    .formStyle {
+        margin: 10px;
+        margin-right: -4px;
+    }
+    .formBtn{
+        margin-left: 20%;
+    }
+}
+
+@media (max-width: 390px)
+{
+    .nome{
+        width: 250px;  
+        
+    }
+    .lista{
+        width: 250px;  
+        
+    }
+    .all{
+        width: 250px;                  
+    }
+    .formBtn{        
+        padding-left: 20%;
+    }
+ 
+}
+
+@media (max-width: 710px)
+{
+    .nome{
+        width: 100%;  
+    }
+    .lista{
+        width: 100%;  
+    }
+    .all{
+        width: 100%;          
+        min-width: 50%;
+    }
+    .formBtn{        
+        padding-left: 15%;
+    }
+}
+
+
+@media (max-width: 820px)
+{
+    .nome{
+        width: 100%;  
+    }
+    .lista{
+        width: 100%;  
+    }
+    .all{
+        width: 100%;          
+        min-width: 50%;
+    }
+    .formBtn{        
+        padding-left: 4%;
+    }
+}
