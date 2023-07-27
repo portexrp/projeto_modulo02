@@ -21,7 +21,7 @@ export const InputGeneric = ({ type, value, placeholder, onChange, label, style 
         const emailRegex = /^\S+@\S+\.\S+$/;
 
         if (!emailRegex.test(novoValor)) {
-            event.target.style
+            setEmailError('Por favor, insira um email válido.');
         } else {
             setEmailError('');
         }
@@ -31,9 +31,9 @@ export const InputGeneric = ({ type, value, placeholder, onChange, label, style 
     if (type == 'email') {
         return (
             <Form.Group className={'formGroup '+style}>
-                <Form.Label aria-label={label} >{label}</Form.Label>
+                <Form.Label aria-label={label} >{label} {emailError && <span style={{opacity: '1', fontSize: '12px'}}>{emailError}</span>}</Form.Label>
                 <Form.Control type={type} value={value} placeholder={placeholder} onChange={handleInput} />
-                {emailError && <span>{emailError}</span>}
+                
             </Form.Group>
         )
 
