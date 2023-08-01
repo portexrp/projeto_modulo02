@@ -14,31 +14,59 @@ import { useState } from 'react';
 import './Style.css'
 
 export const InputGeneric = ({ type, value, placeholder, onChange, label, style }) => {
-    const [emailError, setEmailError] = useState('');
-
-    const handleInput = (event) => {
-        const novoValor = event.target.value;
-        const emailRegex = /^\S+@\S+\.\S+$/;
-
-        if (!emailRegex.test(novoValor)) {
-            event.target.style
-        } else {
-            setEmailError('');
-        }
-        onChange(novoValor);
-    }
+    const [inputError, setError] = useState('');
 
     if (type == 'email') {
+
+        const handleInput = (event) => {
+            const novoValor = event.target.value;
+            const emailRegex = /^\S+@\S+\.\S+$/;
+    
+            if (!emailRegex.test(novoValor)) {
+                setError('Por favor, insira um email válido.');
+            } else {
+                setError('');
+            }
+            onChange(novoValor);
+        }
         return (
             <Form.Group className={'formGroup '+style}>
-                <Form.Label aria-label={label} >{label}</Form.Label>
+                <Form.Label aria-label={label} >{label} {inputError && <span style={{opacity: '1', fontSize: '12px'}}>{inputError}</span>}</Form.Label>
                 <Form.Control type={type} value={value} placeholder={placeholder} onChange={handleInput} />
-                {emailError && <span>{emailError}</span>}
+                
             </Form.Group>
         )
 
     }
+    if (type == 'password') {
+        const handleInput = (event) => {
+            const novoValor = event.target.value;
+            if (novoValor.length < 8) {
+                setError('Min. 8 caracteres!');
+            } else {
+                setError('');
+            }
+    
+            onChange(novoValor);
+        }
+        return (
+            <Form.Group className={'formGroup '+style}>
+                <Form.Label aria-label={label} >{label} {inputError && <span style={{opacity: '1', fontSize: '12px'}}>{inputError}</span>}</Form.Label>
+                <Form.Control type={type} value={value} placeholder={placeholder} onChange={handleInput} />
+                
+            </Form.Group>
+        )
+
+    }
+
+    const handleInput = (event) => {
+        const novoValor = event.target.value;
+
+        onChange(novoValor);
+    }
+
     return (
+        
         <Form.Group className={' formGroup '+style} >
             <Form.Label aria-label={label} >{label}</Form.Label>
             <Form.Control  type={type} value={value} placeholder={placeholder} onChange={handleInput} />
