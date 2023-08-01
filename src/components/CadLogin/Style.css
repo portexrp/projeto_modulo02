@@ -1,0 +1,31 @@
+.tituloModal{
+ margin-left: auto;
+ margin-right: auto;
+ padding-left: 40px;
+ background-color: white;
+}
+
+.bodyModal {
+    width: 480px;
+    background-color: white;
+}
+
+.inputCadLogin{
+    width: 450px;    
+}
+
+@media (max-width: 360px)
+{
+  .inputCadLogin
+   {
+    width: 250px;    
+   }
+}
+
+@media (max-width: 390px)
+{
+  .inputCadLogin
+   {
+    width: 340px;   
+   }
+}

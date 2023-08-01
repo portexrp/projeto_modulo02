@@ -7,7 +7,7 @@ import { InputGeneric } from '../../utils/InputGenericFull';
 export const CadPaciente = () => {
     return (
         <Form className='formStyle'>
-            <InputGeneric style='nome' type="text" value={''} placeholder="Digite seu Nome ..." onChange={''} label="Nome" />
+            <InputGeneric style='nome' type="text" value={''} placeholder="Digite seu Nome ..." onChange={'teste'} label="Nome" />
             <InputGeneric style='all' type="date" value={''} placeholder="Data de Nasc." onChange={''} label="Dt. Nasc." />
             <InputGeneric style='all' type="number" value={''} placeholder="Digite seu CPF." onChange={''} label="CPF" />
             <InputGeneric style='all' type="text" value={''} placeholder="Digite seu RG." onChange={''} label="RG" />

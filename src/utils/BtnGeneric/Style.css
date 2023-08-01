@@ -1,5 +1,7 @@
 .baseBtn {    
-    min-width: 130px;    
+    min-width: 130px;   
+    width: 165px; 
+    max-width: 250px;
     font-weight: 700 !important;
     display: inline-block;
     margin: 10px;
@@ -11,7 +13,14 @@
 
 .cancelar {
     background-color: rgb(179, 175, 175) !important;
+    border-color: rgb(179, 175, 175) !important;
     color: white !important;
+}
+
+.cancelar:hover {
+    background-color: white !important;
+    border-color: rgb(179, 175, 175) !important;
+    color: rgb(179, 175, 175) !important;
 }
 
 .cadastrar {
