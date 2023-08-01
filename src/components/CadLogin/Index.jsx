@@ -43,7 +43,12 @@ export const CadLogin = () => {
             return
 
         }
-        users[email] = password
+        users = {
+            email: email,
+            password: password,
+            nome: nome,
+        }
+        
         localStorage.setItem('users', JSON.stringify(users))
         setCadastroSucesso(true);
         handleClose();

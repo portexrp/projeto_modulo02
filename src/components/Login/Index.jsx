@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { useNavigate, Route } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import loginGif from '../../assets/Spinner-1s-200px.gif'
 import './Style.css';
 import { InputGeneric } from '../../utils/InputGenericFull';
 import { BtnGeneric } from '../../utils/BtnGeneric/Btn.Generic';
 import { CadLogin } from '../CadLogin/Index';
-
+import { AuthContext } from '../../utils/auth/authComponents';
+import { useContext } from 'react';
 
 
 export const LoginComponents = () => {
@@ -14,15 +15,18 @@ export const LoginComponents = () => {
 
   const [msgLogin, setMsglogin] = useState(false);
   const [showAnimation, setShowAnimation] = useState(false);
-  var [isAuthenticated, setisAuthenticated] = useState(false);
-  
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const {setAuth} = useContext(AuthContext)
 
   const handleEmail = (novoValor) => {
     setEmail(novoValor);
   };
+
+  const handleEsqueciSenha = ()=>{
+    alert('Função a ser implementada')
+  }
 
   const handlePasswoord = (novoValor) => {
     setPassword(novoValor);
@@ -30,16 +34,17 @@ export const LoginComponents = () => {
 
   const redirectLogin = (event) => {
     event.preventDefault();
-    const login = JSON.parse(localStorage.getItem('user'));
+    const login = JSON.parse(localStorage.getItem('users'));
     if (login) {
       if (email === login.email && password === login.password) {
-        const isAuthenticated = () => {
-          const login = JSON.parse(localStorage.getItem("user"));
-          return login !== null;
-        };
         setShowAnimation(true);
+        setAuth({
+          user: login,
+          isLogged: true,
+        })
+
         setTimeout(() => {
-          navigate('/home');
+          navigate('/');
         }, 2000);
       }
     }
@@ -64,21 +69,12 @@ export const LoginComponents = () => {
             <div style={{ display: 'inline-block', backgroundColor: 'white' }}>
               <BtnGeneric type="submit" nomeBtn="Login" funcao="cadastrar" />
               <CadLogin />
-              <a href="" style={{ color: '#a7a8f4', fontWeight: '600', textDecoration: 'none', backgroundColor: 'white', marginLeft: '10px', marginRight: '10px' }}>Esqueci minha senha</a>
+              <a href="#" style={{ color: '#a7a8f4', fontWeight: '600', textDecoration: 'none', backgroundColor: 'white', marginLeft: '10px', marginRight: '10px' }} onClick={handleEsqueciSenha}>Esqueci minha senha</a>
             </div>
           </>
         )}
       </Form>
 
     </div>
-  );
-};
-
-
-export const ProtectedRoute = ({ path, element }) => {
-  return isAuthenticated() ? (
-    <Route path={path} element={element} />
-  ) : (
-    <Navigate to="/" replace={true} />
   );
 };

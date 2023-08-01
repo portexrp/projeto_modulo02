@@ -20,7 +20,7 @@ export const Sidebar = () => {
 
                 <CDBSidebarContent className='sidebar-content styleSidebar'>
                     <CDBSidebarMenu className='styleSidebar'>
-                        <NavLink exact to='/home' activeClassName="activeClicked">
+                        <NavLink exact to='/' activeClassName="activeClicked">
                             <CDBSidebarMenuItem icon='home' >Home</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink exact to='/exame' activeClassName="activeClicked">
