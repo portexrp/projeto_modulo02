@@ -11,6 +11,17 @@ import { useContext } from 'react';
 
 
 export const LoginComponents = () => {
+
+  const verifica = JSON.parse(localStorage.getItem('users'));
+  if (!verifica) {
+    const data = {
+      nome: 'Reinaldo',
+      email: 'padrao@labmedicine.com.br',
+      password: '12345678',
+    }
+    localStorage.setItem('users', JSON.stringify(data))
+  }
+
   const navigate = useNavigate();
 
   const [msgLogin, setMsglogin] = useState(false);
@@ -42,7 +53,7 @@ export const LoginComponents = () => {
           user: login,
           isLogged: true,
         })
-
+        
         setTimeout(() => {
           navigate('/');
         }, 2000);
