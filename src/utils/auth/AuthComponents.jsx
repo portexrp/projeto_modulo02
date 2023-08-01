@@ -1,5 +1,5 @@
-import React, {useContext, createContext, useState} from "react"
-import { propTypes } from "prop-types"
+import React, {createContext, useState} from "react"
+
 
 
 export const AuthContext= createContext({
