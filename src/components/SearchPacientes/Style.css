@@ -1,0 +1,6 @@
+
+.searchButton {
+    display: flex;
+    flex-direction: column;    
+}
+
