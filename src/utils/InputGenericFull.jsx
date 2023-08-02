@@ -13,7 +13,7 @@ import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import './Style.css'
 
-export const InputGeneric = ({ type, value, placeholder, onChange, label, style }) => {
+export const InputGeneric = ({ type, value, name, placeholder,required, onChange, label, style }) => {
     const [inputError, setError] = useState('');
 
     if (type == 'email') {
@@ -32,7 +32,7 @@ export const InputGeneric = ({ type, value, placeholder, onChange, label, style 
         return (
             <Form.Group className={'formGroup '+style}>
                 <Form.Label aria-label={label} >{label} {inputError && <span style={{opacity: '1', fontSize: '12px'}}>{inputError}</span>}</Form.Label>
-                <Form.Control type={type} value={value} placeholder={placeholder} onChange={handleInput} />
+                <Form.Control type={type} name={name} value={value} placeholder={placeholder} onChange={handleInput} required={required} />
                 
             </Form.Group>
         )
@@ -52,7 +52,7 @@ export const InputGeneric = ({ type, value, placeholder, onChange, label, style 
         return (
             <Form.Group className={'formGroup '+style}>
                 <Form.Label aria-label={label} >{label} {inputError && <span style={{opacity: '1', fontSize: '12px'}}>{inputError}</span>}</Form.Label>
-                <Form.Control type={type} value={value} placeholder={placeholder} onChange={handleInput} />
+                <Form.Control type={type} name={name} value={value} placeholder={placeholder} onChange={handleInput} required={required} />
                 
             </Form.Group>
         )
@@ -61,7 +61,6 @@ export const InputGeneric = ({ type, value, placeholder, onChange, label, style 
 
     const handleInput = (event) => {
         const novoValor = event.target.value;
-
         onChange(novoValor);
     }
 
@@ -69,7 +68,7 @@ export const InputGeneric = ({ type, value, placeholder, onChange, label, style 
         
         <Form.Group className={' formGroup '+style} >
             <Form.Label aria-label={label} >{label}</Form.Label>
-            <Form.Control  type={type} value={value} placeholder={placeholder} onChange={handleInput} />
+            <Form.Control  type={type} name={name} value={value} placeholder={placeholder} onChange={handleInput} required={required} />
         </Form.Group>
     )
 
