@@ -57,45 +57,45 @@ export const CadExame = () => {
 
     }
 
-    const handleCadExame = (e)=>{
+    const handleCadExame = (e) => {
         e.preventDefault()
-        
+
         localStorage.setItem('cadExame', JSON.stringify(data))
         setShowAnimation(true);
         setTimeout(() => {
             navigate('/');
-          }, 2000);
+        }, 2000);
     }
 
     return (
         <Form className='formStyle'>
-                        {showAnimation ? (
+            {showAnimation ? (
                 <div style={{ textAlign: 'center', backgroundColor: 'white' }}>
                     <img src={loginGif} style={{ backgroundColor: 'white' }} alt="Efetuando cadastro..." />
                     <p style={{ backgroundColor: 'white' }}>Efetuando cadastro</p>
                 </div>
-            ):(
+            ) : (
                 <>
-            <InputGeneric style='lista' type="text" value={exame} placeholder="Nome do Exame..." onChange={handleExame} label="Exame" />
-            <InputGeneric style='all' type="date" value={dtExame} placeholder="Data de Exame." onChange={handleDtExame} label="Dt. Exame" />            
-            <InputGeneric style='all' type="text" value={horario} placeholder="Horário de retirada." onChange={handleHorario} label="Horário de retirada" />
-            <InputGeneric style='lista' type="text" value={tipoExame} placeholder="Tipo do Exame" onChange={handleTipoExame} label="Tipo do Exame" />
-            <InputGeneric style='lista' type="text" value={laboratório} placeholder="Laboratório." onChange={handleLaboratório} label="Laboratório" />
-            <InputGeneric style='lista' type="email" value={url} placeholder="URL do Documento." onChange={handleUrl} label="URL do Documento" />
-            <InputGeneric style='lista' type="email" value={resultado} placeholder="Resultado." onChange={handleResultado} label="Resultado" />
+                    <InputGeneric style='lista' type="text" value={exame} placeholder="Nome do Exame..." onChange={handleExame} label="Exame" />
+                    <InputGeneric style='all' type="date" value={dtExame} placeholder="Data de Exame." onChange={handleDtExame} label="Dt. Exame" />
+                    <InputGeneric style='all' type="text" value={horario} placeholder="Horário de retirada." onChange={handleHorario} label="Horário de retirada" />
+                    <InputGeneric style='lista' type="text" value={tipoExame} placeholder="Tipo do Exame" onChange={handleTipoExame} label="Tipo do Exame" />
+                    <InputGeneric style='lista' type="text" value={laboratório} placeholder="Laboratório." onChange={handleLaboratório} label="Laboratório" />
+                    <InputGeneric style='lista' type="email" value={url} placeholder="URL do Documento." onChange={handleUrl} label="URL do Documento" />
+                    <InputGeneric style='lista' type="email" value={resultado} placeholder="Resultado." onChange={handleResultado} label="Resultado" />
 
-            <Row>
-            <Col>
-                    <div className='formBtn' style={{ backgroundColor: "white", borderRadius:'16px', paddingTop:'20px', marginTop:'-11px'}}>
-                    <Button type='submit' className='baseBtn cadastrar' onClick={handleCadExame}>Cadastrar</Button>
-                        <BtnGeneric type="submit" nomeBtn="Editar" funcao="editar" />
-                        <BtnGeneric type="submit" nomeBtn="Excluir" funcao="excluir" />
-                    </div >
-                </Col>
+                    <Row>
+                        <Col>
+                            <div className='formBtn' style={{ backgroundColor: "white", borderRadius: '16px', paddingTop: '20px', marginTop: '-11px' }}>
+                                <Button type='submit' className='baseBtn cadastrar' onClick={handleCadExame}>Cadastrar</Button>
+                                <BtnGeneric type="submit" nomeBtn="Editar" funcao="editar" />
+                                <BtnGeneric type="submit" nomeBtn="Excluir" funcao="excluir" />
+                            </div >
+                        </Col>
 
-            </Row>
-            </>
-                    )}
+                    </Row>
+                </>
+            )}
         </Form>
     )
 }
