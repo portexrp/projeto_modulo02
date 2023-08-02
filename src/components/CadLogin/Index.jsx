@@ -84,12 +84,12 @@ export const CadLogin = () => {
 
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
-                            Close
+                        <Button className="baseBtn cancelar" onClick={handleClose}>
+                            Fechar
                         </Button>
 
-                        <Button variant="primary" onClick={handleCadLogin} disabled={validaPassword}>
-                            Save Changes
+                        <Button className="baseBtn cadastrar" onClick={handleCadLogin} disabled={validaPassword}>
+                            Salvar
                         </Button>
                     </Modal.Footer>
                 </Modal>

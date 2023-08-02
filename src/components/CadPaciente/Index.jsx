@@ -160,18 +160,12 @@ export const CadPaciente = () => {
 
     const handleCadPAciente = (e) => {
         e.preventDefault()
-        const pacientes = localStorage.getItem('cadPaciente')
-        if (!Array.isArray(pacientes)) {
-            pacientes = [];
-          }
-        pacientes.push(data)
-        localStorage.setItem('cadPaciente', JSON.stringify(pacientes))
+        
+        localStorage.setItem('cadPaciente', JSON.stringify(data))
         setShowAnimation(true);
         setTimeout(() => {
             navigate('/');
           }, 2000);
-
-
     }
 
 
